@@ -1,25 +1,33 @@
 <h2>Farming Game Net Asset Calculator</h2>
 <div>
   <label for="hayAcres">Acres of Hay</label>
-  <input type="number" id="hayAcres">
+  <input type="number" id="hayAcresID" #hayAcres 
+    min="0" step="10"
+    (change)="hayAcresChanged(hayAcres.value)">
 </div>
 <div>
   <label for="grainAcres">Acres of Grain</label>
-  <input type="number" id="grainAcres">
+  <input type="number" id="grainAcres"
+  #grainAcres
+  min="0" step="10"
+  (change)="grainAcresChanged(grainAcres.value)">
 </div>
 <div>
   <label for="fruitAcres">Acres of Fruit</label>
-  <input type="number" id="fruitAcres">
+  <input type="number" #fruitAcres
+  min="0" step="5"
+  (change)="fruitAcresChanged(fruitAcres.value)">
 </div>
 <div>
   <label for="cowCount">Number of Cows</label>
-  <input type="number" id="cowCount">
-
+  <input type="number" #cowCount
+  min="0" step="10"
+  (change)="cowsChanged(cowCount.value)">
 </div>
 <div>
   <label for="hasTractor">Tractor?</label>
-  <input type="checkbox" id="hasTractor">
-
+  <input type="checkbox" id="hasTractor" #hasTractor
+  (change)="onChange(hasTractor.checked)">
 </div>
 <div>
   <label for="hasHarvester">Harvester?</label>
@@ -29,4 +37,4 @@
   <label for="cashAmount">Cash on Hand</label>
   <input type="number" id="cashAmount">
 </div>
-<h3 id="cashOutput">Fill in the Assets to begin counting</h3>
+<h3 id="cashOutput">{{cashPhrase}}</h3>

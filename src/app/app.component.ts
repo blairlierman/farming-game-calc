@@ -13,6 +13,7 @@ export class AppComponent {
   cowAmount = 0;
   tractorAmount = 0;
   harvesterAmount = 0;
+  cashAmount = 0;
   cashPhrase = "Fill in the Assets to begin counting";
 
   hayAcresChanged(input: number)
@@ -54,11 +55,19 @@ export class AppComponent {
     this.calculateTotal();
   }
 
+  cashChanged(cash: string)
+  {
+    var cashInt = parseInt(cash);
+    this.cashAmount = cashInt;
+    this.calculateTotal();
+  }
+
   calculateTotal()
   {
     this.totalAmount = this.hayAmount + this.grainAmount 
       + this.fruitAmount + this.cowAmount
-      + this.harvesterAmount + this.tractorAmount;
+      + this.harvesterAmount + this.tractorAmount
+      + this.cashAmount;
 
     if(this.totalAmount > 0)
     {

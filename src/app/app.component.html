@@ -36,6 +36,7 @@
 </div>
 <div>
   <label for="cashAmount">Cash on Hand</label>
-  <input type="number" id="cashAmount">
+  <input type="text" id="cashAmount" #cashAmount
+  (change)="cashChanged(cashAmount.value)">
 </div>
 <h3 id="cashOutput">{{cashPhrase}}</h3>

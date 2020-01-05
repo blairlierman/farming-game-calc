@@ -27,11 +27,12 @@
 <div>
   <label for="hasTractor">Tractor?</label>
   <input type="checkbox" id="hasTractor" #hasTractor
-  (change)="onChange(hasTractor.checked)">
+  (change)="tractorChanged(hasTractor.checked)">
 </div>
 <div>
   <label for="hasHarvester">Harvester?</label>
-  <input type="checkbox" id="hasHarvester">
+  <input type="checkbox" id="hasHarvester" #hasHarvester
+  (change)="harvesterChanged(hasHarvester.checked)">
 </div>
 <div>
   <label for="cashAmount">Cash on Hand</label>

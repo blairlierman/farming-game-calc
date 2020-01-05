@@ -45,11 +45,13 @@ export class AppComponent {
   tractorChanged(checked: boolean)
   {
     this.tractorAmount = checked ? 10000: 0;
+    this.calculateTotal();
   }
 
   harvesterChanged(checked: boolean)
   {
     this.harvesterAmount = checked ? 10000: 0;
+    this.calculateTotal();
   }
 
   calculateTotal()
@@ -57,6 +59,7 @@ export class AppComponent {
     this.totalAmount = this.hayAmount + this.grainAmount 
       + this.fruitAmount + this.cowAmount
       + this.harvesterAmount + this.tractorAmount;
+
     if(this.totalAmount > 0)
     {
       this.cashPhrase = `You have \$${this.totalAmount} in Net Assets!`;

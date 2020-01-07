@@ -57,7 +57,8 @@
   <div class="card bg-light mb-3" style="max-width: 18rem;">
     <div class="card-header">Total Net Assets</div>
     <div class="card-body">
-      <h3 id="cashOutput">{{cashPhrase}}</h3>
+      <h3 *ngIf="totalAmount == 0">{{cashPhrase}}</h3>
+      <h3 *ngIf="totalAmount > 0">{{totalAmount | currency:'USD':'symbol':'1.0-0'}}</h3>
     </div>
   </div>
 </div>

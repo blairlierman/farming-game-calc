@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  faSquare: IconDefinition = faSquare;
+  faCheckSquare: IconDefinition = faCheckSquare;
   totalAmount = 0;
   hayAmount = 0;
   grainAmount = 0;
@@ -17,8 +20,8 @@ export class AppComponent {
   cashPhrase = "Fill in the Assets to begin counting";
 
   hayAcresChanged(input: number)
-  {  
-    console.log(input);  
+  {
+    console.log(input);
 
     this.hayAmount = input * 2000;
     this.calculateTotal();
@@ -64,7 +67,7 @@ export class AppComponent {
 
   calculateTotal()
   {
-    this.totalAmount = this.hayAmount + this.grainAmount 
+    this.totalAmount = this.hayAmount + this.grainAmount
       + this.fruitAmount + this.cowAmount
       + this.harvesterAmount + this.tractorAmount
       + this.cashAmount;

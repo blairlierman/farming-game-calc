@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 label.form-check-label {
-  color: #c8c8c8;
   font-size: 1.2em;
 }
 
@@ -12,8 +11,9 @@ label input[type="checkbox"] {
   opacity: 0;
 }
 
-label input[type="checkbox"] ~ fa-icon.fa.fa-square-o{
-  color: #c8c8c8;
+label input[type="checkbox"] ~ fa-icon.fa.fa-square-o
+{
+  color: #ced4da;
   display: inline;
 }
 
@@ -26,12 +26,12 @@ label input[type="checkbox"]:checked ~ fa-icon.fa.fa-square-o{
   display: none;
 }
 
-label input[type="checkbox"]:checked ~ fa-icon.fa.fa-check-square-o
-{
-  color: theme-color();
+label input[type="checkbox"]:checked ~ fa-icon.fa.fa-check-square-o {
+  color: #ced4da;
   display: inline;
 }
 
 .fa-2x {
   vertical-align: middle;
 }
+

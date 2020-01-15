@@ -27,7 +27,7 @@ label input[type="checkbox"]:checked ~ fa-icon.fa.fa-square-o{
 }
 
 label input[type="checkbox"]:checked ~ fa-icon.fa.fa-check-square-o {
-  color: #ced4da;
+  color: color("text-dark");
   display: inline;
 }
 

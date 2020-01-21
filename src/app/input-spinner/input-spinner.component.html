@@ -1,0 +1,7 @@
+<div class="form-group">
+  <label for="hayAcres">{{label}}</label>
+  <input type="number" class="form-control"
+    id="hayAcres" #hayAcres
+    min="0" step="{{step}}"
+    (input)="onInputChanged(hayAcres.value)">
+</div>

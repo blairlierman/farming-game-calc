@@ -2,13 +2,8 @@
   <span class="text-light">Farming Game Net Asset Calculator</span>
 </nav>
 <div class="container">
-  <div class="form-group">
-    <label for="hayAcres">Acres of Hay</label>
-    <input type="number" class="form-control"
-      id="hayAcres" #hayAcres
-      min="0" step="10"
-      (change)="hayAcresChanged(hayAcres.value)">
-  </div>
+  <app-input-spinner label="Acres of Hay" step="10">
+  </app-input-spinner>
   <div class="form-group">
     <label for="grainAcres">Acres of Grain</label>
     <input type="number" class="form-control"

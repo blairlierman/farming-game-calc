@@ -1,7 +1,15 @@
-<div class="form-group">
-  <label for="hayAcres">{{label}}</label>
-  <input type="number" class="form-control"
-    id="hayAcres" #hayAcres
-    min="0" step="{{step}}"
-    (input)="onInputChanged(hayAcres.value)">
+<div class="form-group row">
+  <label for={{id}} class="col-sm-2 col-form-label col-form-label-lg my-3">{{label}}</label>
+  <div class="input-group input-group-lg my-3 col-sm-10">
+    <div class="input-group-prepend">
+      <button class="btn btn-outline-secondary" type="button" id="button-plus">+</button>
+    </div>
+    <input type="number" class="form-control"
+      id={{id}} #spinner
+      min="0" step="{{step}}"
+      (input)="onInputChanged(spinner.value)">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="button-minus">-</button>
+      </div>
+  </div>
 </div>

@@ -9,6 +9,7 @@ export class InputSpinnerComponent implements OnInit {
 
   @Input() label: string;
   @Input() step: number = null;
+  @Input() id: string;
   @Output() value = new EventEmitter<number>();
 
   constructor() { }
@@ -16,8 +17,7 @@ export class InputSpinnerComponent implements OnInit {
   ngOnInit() {
   }
 
-  onInputChanged(inputValue: number)
-  {
+  onInputChanged(inputValue: number) {
     this.value.emit(inputValue);
   }
 

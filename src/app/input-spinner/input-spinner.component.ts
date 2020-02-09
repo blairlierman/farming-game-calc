@@ -12,13 +12,16 @@ export class InputSpinnerComponent implements OnInit {
   @Input() id: string;
   @Output() value = new EventEmitter<number>();
 
+  inputValue: number;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onInputChanged(inputValue: number) {
-    this.value.emit(inputValue);
+  onInputChanged(newValue: number) {
+    this.inputValue = newValue;
+    this.value.emit(this.inputValue);
   }
 
 }

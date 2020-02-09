@@ -7,7 +7,7 @@
     </div>
     <input type="number" class="form-control"
       id={{id}} #spinner
-      min="0" step="{{step}}"
+      min="{{min}}" step="{{step}}"
       [ngModel]="inputValue"
       (ngModelChange)="onInputChanged($event)">
     <div class="input-group-append">

@@ -10,6 +10,7 @@ export class InputSpinnerComponent implements OnInit {
   @Input() label: string;
   @Input() step = 1;
   @Input() id: string;
+  @Input() min = 0;
   @Output() value = new EventEmitter<number>();
 
   inputValue: number;
@@ -35,7 +36,8 @@ export class InputSpinnerComponent implements OnInit {
     if (!this.inputValue) { this.inputValue = 0; }
     if (!this.step) { this.step = 1; }
 
-    this.onInputChanged(this.inputValue - this.step);
+    const subtractedValue = this.inputValue - this.step;
+    this.onInputChanged(subtractedValue < this.min ? this.min : subtractedValue);
   }
 
 }

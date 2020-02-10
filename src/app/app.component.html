@@ -2,35 +2,18 @@
   <span class="text-light">Farming Game Net Asset Calculator</span>
 </nav>
 <div class="container">
-  <div class="form-group">
-    <label for="hayAcres">Acres of Hay</label>
-    <input type="number" class="form-control"
-      id="hayAcres" #hayAcres
-      min="0" step="10"
-      (change)="hayAcresChanged(hayAcres.value)">
-  </div>
-  <div class="form-group">
-    <label for="grainAcres">Acres of Grain</label>
-    <input type="number" class="form-control"
-    id="grainAcres"
-    #grainAcres
-    min="0" step="10"
-    (change)="grainAcresChanged(grainAcres.value)">
-  </div>
-  <div class="form-group">
-    <label for="fruitAcres">Acres of Fruit</label>
-    <input type="number" class="form-control"
-    id="fruitAcres" #fruitAcres
-    min="0" step="5"
-    (change)="fruitAcresChanged(fruitAcres.value)">
-  </div>
-  <div class="form-group">
-    <label for="cowCount">Number of Cows</label>
-    <input type="number" class="form-control"
-    id="cowCount" #cowCount
-    min="0" step="10"
-    (change)="cowsChanged(cowCount.value)">
-  </div>
+  <app-touch-input-spinner id="hayAcres" label="Acres of Hay" step="10"
+    (value)="hayAcresChanged($event)">
+  </app-touch-input-spinner>
+  <app-touch-input-spinner id="grainAcres" label="Acres of Grain" step="10"
+  (value)="grainAcresChanged($event)">
+  </app-touch-input-spinner>
+  <app-touch-input-spinner id="fruitAcres" label="Acres of Fruit" step="5"
+  (value)="fruitAcresChanged($event)">
+  </app-touch-input-spinner>
+  <app-touch-input-spinner id="cowCount" label="Number of Cows" step="10"
+  (value)="cowsChanged($event)">
+  </app-touch-input-spinner>
   <div class="form-group form-check">
   </div>
   <div class="form-group form-check-inline">

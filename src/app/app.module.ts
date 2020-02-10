@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { InputSpinnerComponent } from './input-spinner/input-spinner.component';
+import { TouchInputSpinnerComponent } from './touch-input-spinner/touch-input-spinner.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputSpinnerComponent
+    TouchInputSpinnerComponent
   ],
   imports: [
     BrowserModule,

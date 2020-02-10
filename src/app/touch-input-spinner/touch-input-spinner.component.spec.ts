@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputSpinnerComponent } from './input-spinner.component';
+import { TouchInputSpinnerComponent } from './touch-input-spinner.component';
 
 describe('InputSpinnerComponent', () => {
-  let component: InputSpinnerComponent;
-  let fixture: ComponentFixture<InputSpinnerComponent>;
+  let component: TouchInputSpinnerComponent;
+  let fixture: ComponentFixture<TouchInputSpinnerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputSpinnerComponent ]
+      declarations: [ TouchInputSpinnerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InputSpinnerComponent);
+    fixture = TestBed.createComponent(TouchInputSpinnerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

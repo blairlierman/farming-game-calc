@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-input-spinner',
-  templateUrl: './input-spinner.component.html',
-  styleUrls: ['./input-spinner.component.scss']
+  selector: 'app-touch-input-spinner',
+  templateUrl: './touch-input-spinner.component.html',
+  styleUrls: ['./touch-input-spinner.component.scss']
 })
-export class InputSpinnerComponent implements OnInit {
+export class TouchInputSpinnerComponent implements OnInit {
 
   @Input() label: string;
   @Input() step = 1;

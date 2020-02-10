@@ -28,8 +28,7 @@ export class AppComponent {
 
   }
 
-  grainAcresChanged(input: number)
-  {
+  grainAcresChanged(input: number) {
     this.grainAmount = input * 2000;
     this.calculateTotal();
   }

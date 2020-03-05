@@ -1,1 +1,11 @@
-<p>dollar-amount-input works!</p>
+<div class="form-group">
+  <label for="cashAmount">Cash on Hand</label>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">$</span>
+    </div>
+    <input type="text" id="cashAmount" #cashAmount
+    class="form-control" aria-label="Amount (to the nearest hundred)"
+    (change)="onInputChanged(cashAmount.value)">
+  </div>
+</div>

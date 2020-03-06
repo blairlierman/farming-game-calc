@@ -59,7 +59,7 @@ export class AppComponent {
 
   cashChanged(cash: string)
   {
-    var cashInt = parseInt(cash);
+    const cashInt = parseInt(cash, 10) || 0;
     this.cashAmount = cashInt;
     this.calculateTotal();
   }

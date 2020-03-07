@@ -28,7 +28,8 @@
     <label class="form-check-label" for="hasHarvester">
       <input type="checkbox" name='hasHarvester' class="form-check-input"
       id="hasHarvester" #hasHarvester
-      (change)="harvesterChanged(hasHarvester.checked)">
+      [ngModel]="hasHarvesterValue"
+      (ngModelChange)="harvesterChanged(hasHarvester.checked)">
       <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
       <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
         Harvester?
@@ -44,5 +45,11 @@
       <h3 *ngIf="totalAmount == 0">{{cashPhrase}}</h3>
       <h3 *ngIf="totalAmount > 0">{{totalAmount | currency:'USD':'symbol':'1.0-0'}}</h3>
     </div>
+  </div>
+  <div>
+    <button class="btn btn-primary"
+      (click)="onResetClicked()">
+        Reset
+    </button>
   </div>
 </div>

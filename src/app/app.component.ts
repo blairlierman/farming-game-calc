@@ -18,11 +18,10 @@ export class AppComponent {
   tractorAmount = 0;
   harvesterAmount = 0;
   cashAmount = 0;
-  cashPhrase = "Fill in the Assets to begin counting";
+  cashPhrase = 'Fill in the Assets to begin counting';
   hasHarvesterValue: boolean;
 
-  hayAcresChanged(input: number)
-  {
+  hayAcresChanged(input: number) {
     console.log(input);
 
     this.hayAmount = input * 2000;
@@ -35,51 +34,42 @@ export class AppComponent {
     this.calculateTotal();
   }
 
-  fruitAcresChanged(input: number)
-  {
+  fruitAcresChanged(input: number) {
     this.fruitAmount = input * 5000;
     this.calculateTotal();
   }
 
-  cowsChanged(input: number)
-  {
+  cowsChanged(input: number) {
     this.cowAmount = input * 500;
     this.calculateTotal();
   }
 
-  tractorChanged(checked: boolean)
-  {
-    this.tractorAmount = checked ? 10000: 0;
+  tractorChanged(checked: boolean) {
+    this.tractorAmount = checked ? 10000 : 0;
     this.calculateTotal();
   }
 
-  harvesterChanged(checked: boolean)
-  {
-    this.harvesterAmount = checked ? 10000: 0;
+  harvesterChanged(checked: boolean) {
+    this.harvesterAmount = checked ? 10000 : 0;
     this.calculateTotal();
   }
 
-  cashChanged(cash: string)
-  {
+  cashChanged(cash: string) {
     const cashInt = parseInt(cash, 10) || 0;
     this.cashAmount = cashInt;
     this.calculateTotal();
   }
 
-  calculateTotal()
-  {
+  calculateTotal() {
     this.totalAmount = this.hayAmount + this.grainAmount
       + this.fruitAmount + this.cowAmount
       + this.harvesterAmount + this.tractorAmount
       + this.cashAmount;
 
-    if(this.totalAmount > 0)
-    {
+    if (this.totalAmount > 0) {
       this.cashPhrase = `You have \$${this.totalAmount} in Net Assets!`;
-    }
-    else
-    {
-      this.cashPhrase = "Fill in the Assets to begin counting";
+    } else {
+      this.cashPhrase = 'Fill in the Assets to begin counting';
     }
   }
 

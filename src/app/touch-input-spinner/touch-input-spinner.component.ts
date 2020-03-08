@@ -15,7 +15,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class TouchInputSpinnerComponent implements ControlValueAccessor {
 
-  @Input() label: string;
   @Input() step = 1;
   @Input() id: string;
   @Input() min = 0;

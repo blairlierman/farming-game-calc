@@ -2,18 +2,22 @@
   <span class="text-light">Farming Game Net Asset Calculator</span>
 </nav>
 <div class="container mt-2">
-  <app-touch-input-spinner id="hayAcres" label="Acres of Hay" step="10"
+  <app-touch-input-spinner id="hayAcres" step="10"
     [ngModel]="hayAcres"
     (ngModelChange)="hayAcresChanged($event)">
+    Acres of Hay
   </app-touch-input-spinner>
-  <app-touch-input-spinner id="grainAcres" label="Acres of Grain" step="10"
+  <app-touch-input-spinner id="grainAcres" step="10"
   (value)="grainAcresChanged($event)">
+    Acres of Grain
   </app-touch-input-spinner>
-  <app-touch-input-spinner id="fruitAcres" label="Acres of Fruit" step="5"
+  <app-touch-input-spinner id="fruitAcres" step="5"
   (value)="fruitAcresChanged($event)">
+    Acres of Fruit
   </app-touch-input-spinner>
-  <app-touch-input-spinner id="cowCount" label="Number of Cows" step="10"
+  <app-touch-input-spinner id="cowCount" step="10"
   (value)="cowsChanged($event)">
+    Number of Cows
   </app-touch-input-spinner>
   <div class="form-group form-check">
   </div>

@@ -8,15 +8,18 @@
     Acres of Hay
   </app-touch-input-spinner>
   <app-touch-input-spinner id="grainAcres" step="10"
-  (value)="grainAcresChanged($event)">
+    [ngModel]="grainAcres"
+    (ngModelChange)="grainAcresChanged($event)">
     Acres of Grain
   </app-touch-input-spinner>
   <app-touch-input-spinner id="fruitAcres" step="5"
-  (value)="fruitAcresChanged($event)">
+    [ngModel]="fruitAcres"
+    (ngModelChange)="fruitAcresChanged($event)">
     Acres of Fruit
   </app-touch-input-spinner>
   <app-touch-input-spinner id="cowCount" step="10"
-  (value)="cowsChanged($event)">
+    [ngModel]="numberOfCows"
+    (ngModelChange)="cowsChanged($event)">
     Number of Cows
   </app-touch-input-spinner>
   <div class="form-group form-check">
@@ -24,8 +27,9 @@
   <div class="form-group form-check-inline">
     <label class="form-check-label" for="hasTractor">
       <input type="checkbox" class="form-check-input"
-      id="hasTractor" #hasTractor
-      (change)="tractorChanged(hasTractor.checked)">
+      id="hasTractor"
+      [ngModel]="hasTractor"
+      (ngModelChange)="tractorChanged($event)">
       <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
       <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
       Tractor?

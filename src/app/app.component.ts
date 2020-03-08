@@ -18,8 +18,14 @@ export class AppComponent {
   harvesterAmount = 0;
   cashAmount = 0;
   cashPhrase = 'Fill in the Assets to begin counting';
+  // ngModel variables
   hasHarvesterValue: boolean;
   hayAcres = 10;
+  grainAcres = 10;
+  fruitAcres: number;
+  numberOfCows: number;
+  cashInHand: string;
+  hasTractor: boolean;
 
   hayAcresChanged(input: number) {
     console.log(input);
@@ -30,31 +36,37 @@ export class AppComponent {
   }
 
   grainAcresChanged(input: number) {
+    this.grainAcres = input;
     this.grainAmount = input * 2000;
     this.calculateTotal();
   }
 
   fruitAcresChanged(input: number) {
+    this.fruitAcres = input;
     this.fruitAmount = input * 5000;
     this.calculateTotal();
   }
 
   cowsChanged(input: number) {
+    this.numberOfCows = input;
     this.cowAmount = input * 500;
     this.calculateTotal();
   }
 
   tractorChanged(checked: boolean) {
+    this.hasTractor = checked;
     this.tractorAmount = checked ? 10000 : 0;
     this.calculateTotal();
   }
 
   harvesterChanged(checked: boolean) {
+    this.hasHarvesterValue = checked;
     this.harvesterAmount = checked ? 10000 : 0;
     this.calculateTotal();
   }
 
   cashChanged(cash: string) {
+    this.cashInHand = cash;
     const cashInt = parseInt(cash, 10) || 0;
     this.cashAmount = cashInt;
     this.calculateTotal();
@@ -75,9 +87,11 @@ export class AppComponent {
 
   onResetClicked() {
     this.hayAcres = 10;
-    // this.grainAmount = 10;
-    // this.fruitAmount = null;
-    // this.cashAmount = null;
+    this.grainAcres = 10;
+    this.fruitAcres = null;
+    this.cashInHand = null;
     this.hasHarvesterValue = false;
+    this.hasTractor = false;
+    this.calculateTotal();
   }
 }

@@ -3,7 +3,8 @@
 </nav>
 <div class="container mt-2">
   <app-touch-input-spinner id="hayAcres" label="Acres of Hay" step="10"
-    (value)="hayAcresChanged($event)">
+    [ngModel]="hayAcres"
+    (ngModelChange)="hayAcresChanged($event)">
   </app-touch-input-spinner>
   <app-touch-input-spinner id="grainAcres" label="Acres of Grain" step="10"
   (value)="grainAcresChanged($event)">

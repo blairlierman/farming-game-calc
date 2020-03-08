@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regular-svg-icons';
-import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -20,10 +19,11 @@ export class AppComponent {
   cashAmount = 0;
   cashPhrase = 'Fill in the Assets to begin counting';
   hasHarvesterValue: boolean;
+  hayAcres = 10;
 
   hayAcresChanged(input: number) {
     console.log(input);
-
+    this.hayAcres = input;
     this.hayAmount = input * 2000;
     this.calculateTotal();
 
@@ -74,10 +74,10 @@ export class AppComponent {
   }
 
   onResetClicked() {
-    this.hayAmount = 10;
-    this.grainAmount = 10;
-    this.fruitAmount = null;
-    this.cashAmount = null;
+    this.hayAcres = 10;
+    // this.grainAmount = 10;
+    // this.fruitAmount = null;
+    // this.cashAmount = null;
     this.hasHarvesterValue = false;
   }
 }

@@ -9,9 +9,9 @@ import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regul
 export class AppComponent {
   faSquare: IconDefinition = faSquare;
   faCheckSquare: IconDefinition = faCheckSquare;
-  totalAmount = 0;
-  hayAmount = 0;
-  grainAmount = 0;
+  totalAmount = 40000;
+  hayAmount = 20000;
+  grainAmount = 20000;
   fruitAmount = 0;
   cowAmount = 0;
   tractorAmount = 0;

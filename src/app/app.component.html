@@ -45,7 +45,8 @@
     </label>
   </div>
   <app-dollar-amount-input
-  (dollarAmountOutput)="cashChanged($event)">
+    [ngModel]="cashInHand"
+    (ngModelChange)="cashChanged($event)">
     Cash on Hand
   </app-dollar-amount-input>
   <div class="card bg-light mb-3" style="max-width: 18rem;">

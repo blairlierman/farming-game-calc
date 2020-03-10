@@ -92,6 +92,14 @@ export class AppComponent {
     this.cashInHand = null;
     this.hasHarvesterValue = false;
     this.hasTractor = false;
+    this.totalAmount = 40000;
+    this.hayAmount = 20000;
+    this.grainAmount = 20000;
+    this.fruitAmount = 0;
+    this.cowAmount = 0;
+    this.tractorAmount = 0;
+    this.harvesterAmount = 0;
+    this.cashAmount = 0;
     this.calculateTotal();
   }
 }

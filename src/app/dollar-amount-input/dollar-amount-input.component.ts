@@ -1,24 +1,40 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input, forwardRef } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-dollar-amount-input',
   templateUrl: './dollar-amount-input.component.html',
-  styleUrls: ['./dollar-amount-input.component.scss']
+  styleUrls: ['./dollar-amount-input.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => DollarAmountInputComponent),
+      multi: true
+    }
+  ]
 })
-export class DollarAmountInputComponent implements OnInit {
+export class DollarAmountInputComponent implements ControlValueAccessor {
 
-  @Output() dollarAmountOutput = new EventEmitter<number>();
+  // @Output() dollarAmountOutput = new EventEmitter<number>();
 
-  inputValue: number;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() inputValue: number;
+  propagateChange = (_: any) => {};
 
   onInputChanged(newValue: number) {
     this.inputValue = newValue;
-    this.dollarAmountOutput.emit(this.inputValue);
+    this.propagateChange(this.inputValue);
   }
+
+  writeValue(value: number) {
+    if (value !== undefined) {
+      this.inputValue = value;
+    }
+  }
+
+  registerOnChange(fn: (_: any) => void) {
+    this.propagateChange = fn;
+  }
+
+  registerOnTouched() {}
 
 }

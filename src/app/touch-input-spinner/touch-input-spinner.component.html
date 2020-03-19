@@ -1,5 +1,7 @@
 <div class="form-group row">
-  <label for={{id}} class="col-5 col-form-label mt-1">{{label}}</label>
+  <label for={{id}} class="col-5 col-form-label mt-1">
+    <ng-content></ng-content>
+  </label>
   <div class="input-group input-group-lg mt-1 col-7">
     <div class="input-group-prepend">
       <button class="btn btn-outline-secondary" type="button" id="button-plus"
@@ -8,8 +10,7 @@
     <input type="number" class="form-control"
       id={{id}} #spinner
       min="{{min}}" step="{{step}}"
-      [ngModel]="inputValue"
-      (ngModelChange)="onInputChanged($event)">
+      [ngModel]="inputValue">
     <div class="input-group-append">
       <button class="btn btn-outline-secondary" type="button" id="button-minus"
       (click)="decrement()">-</button>

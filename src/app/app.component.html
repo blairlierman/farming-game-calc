@@ -50,6 +50,7 @@
     Cash on Hand
   </app-dollar-amount-input>
   <app-dollar-amount-input
+    [showNegative]="true"
     [ngModel]="debt"
     (ngModelChange)="debtChanged($event)">
     Debt

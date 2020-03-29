@@ -15,9 +15,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class DollarAmountInputComponent implements ControlValueAccessor {
 
-  // @Output() dollarAmountOutput = new EventEmitter<number>();
-
+  @Input() showNegative: boolean;
   @Input() inputValue: number;
+
   propagateChange = (_: any) => {};
 
   onInputChanged(newValue: number) {

@@ -89,6 +89,7 @@ export class AppComponent {
     this.hayAcres = 10;
     this.grainAcres = 10;
     this.fruitAcres = null;
+    this.numberOfCows = null;
     this.cashInHand = null;
     this.hasHarvesterValue = false;
     this.hasTractor = false;

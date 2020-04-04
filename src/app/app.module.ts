@@ -9,12 +9,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TouchInputSpinnerComponent } from './touch-input-spinner/touch-input-spinner.component';
 import { FormsModule } from '@angular/forms';
 import { DollarAmountInputComponent } from './dollar-amount-input/dollar-amount-input.component';
+import { TouchCheckboxComponent } from './touch-checkbox/touch-checkbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TouchInputSpinnerComponent,
-    DollarAmountInputComponent
+    DollarAmountInputComponent,
+    TouchCheckboxComponent
   ],
   imports: [
     BrowserModule,

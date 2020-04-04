@@ -17,22 +17,22 @@ export class AppComponent {
   tractorAmount = 0;
   harvesterAmount = 0;
   cashAmount = 0;
-  cashPhrase = 'Fill in the Assets to begin counting';
+  debtAmount = 0;
   // ngModel variables
-  hasHarvesterValue: boolean;
   hayAcres = 10;
   grainAcres = 10;
   fruitAcres: number;
   numberOfCows: number;
   cashInHand: string;
+  debt: string;
   hasTractor: boolean;
+  hasHarvesterValue: boolean;
 
   hayAcresChanged(input: number) {
     console.log(input);
     this.hayAcres = input;
     this.hayAmount = input * 2000;
     this.calculateTotal();
-
   }
 
   grainAcresChanged(input: number) {
@@ -72,17 +72,19 @@ export class AppComponent {
     this.calculateTotal();
   }
 
+  debtChanged(debt: string) {
+    let debtInt = parseInt(debt, 10) || 0;
+    // If a negative value is entered, just make it positive. We subtract it later
+    if (debtInt < 0) { debtInt = debtInt * -1;}
+    this.debtAmount = debtInt;
+    this.calculateTotal();
+  }
+
   calculateTotal() {
     this.totalAmount = this.hayAmount + this.grainAmount
       + this.fruitAmount + this.cowAmount
       + this.harvesterAmount + this.tractorAmount
-      + this.cashAmount;
-
-    if (this.totalAmount > 0) {
-      this.cashPhrase = `You have \$${this.totalAmount} in Net Assets!`;
-    } else {
-      this.cashPhrase = 'Fill in the Assets to begin counting';
-    }
+      + this.cashAmount - this.debtAmount;
   }
 
   onResetClicked() {

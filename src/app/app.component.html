@@ -49,11 +49,16 @@
     (ngModelChange)="cashChanged($event)">
     Cash on Hand
   </app-dollar-amount-input>
+  <app-dollar-amount-input
+    [showNegative]="true"
+    [ngModel]="debt"
+    (ngModelChange)="debtChanged($event)">
+    Debt
+  </app-dollar-amount-input>
   <ul class="list-group list-group-horizontal d-flex mb-3">
     <li class="list-group-item"><h3 class="text-muted">Total Value</h3></li>
     <li class="list-group-item flex-grow-1">
-      <h3 *ngIf="totalAmount == 0">{{cashPhrase}}</h3>
-      <h3 *ngIf="totalAmount > 0"><strong>{{totalAmount | currency:'USD':'symbol':'1.0-0'}}</strong></h3>
+      <strong>{{totalAmount | currency:'USD':'symbol':'1.0-0'}}</strong>
     </li>
   </ul>
   <div>

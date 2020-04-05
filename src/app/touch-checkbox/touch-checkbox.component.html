@@ -1,1 +1,9 @@
-<p>touch-checkbox works!</p>
+<label class="form-check-label ml-3">
+  <input type="checkbox" class="form-check-input"
+  id="{{id}}"
+  [ngModel]="inputValue"
+  (ngModelChange)="onInputChanged($event)">
+  <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
+  <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
+  <ng-content></ng-content>
+</label>

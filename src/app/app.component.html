@@ -25,16 +25,19 @@
   <div class="form-group form-check">
   </div>
   <div class="form-group form-check-inline">
-    <label class="form-check-label" for="hasTractor">
-      <input type="checkbox" class="form-check-input"
+    <app-touch-checkbox
       id="hasTractor"
       [ngModel]="hasTractor"
       (ngModelChange)="tractorChanged($event)">
-      <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
-      <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
       Tractor?
-    </label>
-    <label class="form-check-label" for="hasHarvester">
+    </app-touch-checkbox>
+    <app-touch-checkbox
+      id="hasHarvester"
+      [ngModel]="hasHarvesterValue"
+      (ngModelChange)="harvesterChanged($event)">
+      Harvester?
+  </app-touch-checkbox>
+    <!-- <label class="form-check-label" for="hasHarvester">
       <input type="checkbox" name='hasHarvester' class="form-check-input"
       id="hasHarvester" #hasHarvester
       [ngModel]="hasHarvesterValue"
@@ -42,7 +45,7 @@
       <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
       <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
         Harvester?
-    </label>
+    </label> -->
   </div>
   <app-dollar-amount-input
     [ngModel]="cashInHand"

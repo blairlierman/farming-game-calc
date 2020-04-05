@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +6,6 @@ import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regul
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  faSquare: IconDefinition = faSquare;
-  faCheckSquare: IconDefinition = faCheckSquare;
   totalAmount = 40000;
   hayAmount = 20000;
   grainAmount = 20000;

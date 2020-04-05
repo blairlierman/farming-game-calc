@@ -24,28 +24,19 @@
   </app-touch-input-spinner>
   <div class="form-group form-check">
   </div>
-  <div class="form-group form-check-inline">
-    <app-touch-checkbox
+  <div class="form-group form-check-inline d-flex justify-content-around">
+    <app-touch-checkbox class="ml-3"
       id="hasTractor"
       [ngModel]="hasTractor"
       (ngModelChange)="tractorChanged($event)">
       Tractor?
     </app-touch-checkbox>
-    <app-touch-checkbox
+    <app-touch-checkbox class="ml-3"
       id="hasHarvester"
       [ngModel]="hasHarvesterValue"
       (ngModelChange)="harvesterChanged($event)">
       Harvester?
-  </app-touch-checkbox>
-    <!-- <label class="form-check-label" for="hasHarvester">
-      <input type="checkbox" name='hasHarvester' class="form-check-input"
-      id="hasHarvester" #hasHarvester
-      [ngModel]="hasHarvesterValue"
-      (ngModelChange)="harvesterChanged(hasHarvester.checked)">
-      <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
-      <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
-        Harvester?
-    </label> -->
+    </app-touch-checkbox>
   </div>
   <app-dollar-amount-input
     [ngModel]="cashInHand"

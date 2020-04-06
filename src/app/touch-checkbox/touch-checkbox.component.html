@@ -1,8 +1,9 @@
-<label class="form-check-label ml-3">
-  <input type="checkbox" class="form-check-input"
+<label class="form-check-label ml-3" [class.tn-focus]='inputFocusClass'>
+  <input type="checkbox" class="form-check-input" tabindex="-1"
   id="{{id}}"
   [ngModel]="inputValue"
-  (ngModelChange)="onInputChanged($event)">
+  (ngModelChange)="onInputChanged($event)"
+>
   <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
   <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
   <ng-content></ng-content>

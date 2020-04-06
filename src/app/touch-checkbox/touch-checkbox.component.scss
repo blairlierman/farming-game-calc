@@ -16,21 +16,25 @@ label input[type="checkbox"] {
   margin-right: -1.5rem;
 }
 
+// Show the empty square icon for checkbox by default
 label input[type="checkbox"] ~ fa-icon.fa.fa-square-o
 {
   color: #ced4da;
   display: inline;
 }
 
+// Hide the checked square icon for checkbox by default
 label input[type="checkbox"] ~ fa-icon.fa.fa-check-square-o
 {
   display: none;
 }
 
+// Hide the empty square icon for checkbox when checked
 label input[type="checkbox"]:checked ~ fa-icon.fa.fa-square-o{
   display: none;
 }
 
+// Show the checked square icon for checkbox when checked
 label input[type="checkbox"]:checked ~ fa-icon.fa.fa-check-square-o {
   color: color("text-dark");
   display: inline;

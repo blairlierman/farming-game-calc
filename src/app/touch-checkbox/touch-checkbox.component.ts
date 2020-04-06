@@ -1,4 +1,4 @@
-import { Component, Input, forwardRef } from '@angular/core';
+import { Component, Input, forwardRef, ElementRef, Renderer, Renderer2, OnInit, HostListener } from '@angular/core';
 import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regular-svg-icons';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -14,17 +14,41 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class TouchCheckboxComponent implements ControlValueAccessor {
+export class TouchCheckboxComponent implements ControlValueAccessor, OnInit {
   @Input() id: string;
 
   @Input() inputValue: boolean;
 
   faSquare: IconDefinition = faSquare;
   faCheckSquare: IconDefinition = faCheckSquare;
+  inputFocusClass: boolean;
 
   propagateChange = (_: any) => {};
 
-  constructor() { }
+  _setInputFocus(isFocus: boolean) {
+    this.inputFocusClass = isFocus;
+  }
+
+  constructor(private el: ElementRef,  public renderer: Renderer2) {
+    // give the entire component a tabindex
+    this.renderer.setAttribute(this.el.nativeElement, 'tabindex', '0');
+  }
+
+  @HostListener('focus', ['$event']) onFocus(e) {
+    // this.renderer.setElementClass(this._el.nativeElement, 'tn_focus', true);
+    this._setInputFocus(true);
+    return;
+}
+
+@HostListener('blur', ['$event']) onblur(e) {
+    // this.renderer.setElementClass(this._el.nativeElement, 'tn_focus', false);
+    this._setInputFocus(false);
+    return;
+}
+
+  ngOnInit() {
+      this.inputFocusClass = false;
+  }
 
   onInputChanged(newValue: boolean) {
     console.log(`inputChanged: ${newValue}`);

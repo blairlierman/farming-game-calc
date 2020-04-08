@@ -38,16 +38,23 @@ export class TouchCheckboxComponent implements ControlValueAccessor, OnInit {
     // this.renderer.setElementClass(this._el.nativeElement, 'tn_focus', true);
     this._setInputFocus(true);
     return;
-}
+  }
 
-@HostListener('blur', ['$event']) onblur(e) {
-    // this.renderer.setElementClass(this._el.nativeElement, 'tn_focus', false);
-    this._setInputFocus(false);
-    return;
-}
+  @HostListener('blur', ['$event']) onblur(e) {
+      // this.renderer.setElementClass(this._el.nativeElement, 'tn_focus', false);
+      this._setInputFocus(false);
+      return;
+  }
+
+  // React to the enter and space key to change the input value, like a regular checkbox
+  @HostListener('keyup.space', ['$event'])
+  @HostListener('keyup.enter', ['$event'])
+  onKeyUp() {
+    this.inputValue = !this.inputValue;
+  }
 
   ngOnInit() {
-      this.inputFocusClass = false;
+    this.inputFocusClass = false;
   }
 
   onInputChanged(newValue: boolean) {

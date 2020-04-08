@@ -23,27 +23,25 @@ export class TouchCheckboxComponent implements ControlValueAccessor, OnInit {
   faCheckSquare: IconDefinition = faCheckSquare;
   inputFocusClass: boolean;
 
-  propagateChange = (_: any) => {};
+  propagateChange = (_: any) => { };
 
   _setInputFocus(isFocus: boolean) {
     this.inputFocusClass = isFocus;
   }
 
-  constructor(private el: ElementRef,  public renderer: Renderer2) {
+  constructor(private el: ElementRef, public renderer: Renderer2) {
     // give the entire component a tabindex
     this.renderer.setAttribute(this.el.nativeElement, 'tabindex', '0');
   }
 
-  @HostListener('focus', ['$event']) onFocus(e) {
-    // this.renderer.setElementClass(this._el.nativeElement, 'tn_focus', true);
+  @HostListener('focus', ['$event'])
+  onFocus() {
     this._setInputFocus(true);
-    return;
   }
 
-  @HostListener('blur', ['$event']) onblur(e) {
-      // this.renderer.setElementClass(this._el.nativeElement, 'tn_focus', false);
-      this._setInputFocus(false);
-      return;
+  @HostListener('blur', ['$event'])
+  onBlur() {
+    this._setInputFocus(false);
   }
 
   // React to the enter and space key to change the input value, like a regular checkbox
@@ -74,6 +72,6 @@ export class TouchCheckboxComponent implements ControlValueAccessor, OnInit {
     this.propagateChange = fn;
   }
 
-  registerOnTouched() {}
+  registerOnTouched() { }
 
 }

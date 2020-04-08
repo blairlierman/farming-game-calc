@@ -90,6 +90,7 @@ export class AppComponent {
     this.fruitAcres = null;
     this.numberOfCows = null;
     this.cashInHand = null;
+    this.debt = null;
     this.hasHarvesterValue = false;
     this.hasTractor = false;
     this.totalAmount = 40000;
@@ -100,6 +101,7 @@ export class AppComponent {
     this.tractorAmount = 0;
     this.harvesterAmount = 0;
     this.cashAmount = 0;
+    this.debtAmount = 0;
     this.calculateTotal();
   }
 }

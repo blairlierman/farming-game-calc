@@ -50,7 +50,7 @@ export class TouchCheckboxComponent implements ControlValueAccessor, OnInit {
   @HostListener('keyup.space', ['$event'])
   @HostListener('keyup.enter', ['$event'])
   onKeyUp() {
-    this.inputValue = !this.inputValue;
+    this.onInputChanged(!this.inputValue);
   }
 
   ngOnInit() {

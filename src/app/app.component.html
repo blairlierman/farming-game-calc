@@ -24,25 +24,19 @@
   </app-touch-input-spinner>
   <div class="form-group form-check">
   </div>
-  <div class="form-group form-check-inline">
-    <label class="form-check-label" for="hasTractor">
-      <input type="checkbox" class="form-check-input"
+  <div class="form-group form-check-inline d-flex justify-content-around">
+    <app-touch-checkbox class="ml-3"
       id="hasTractor"
       [ngModel]="hasTractor"
       (ngModelChange)="tractorChanged($event)">
-      <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
-      <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
       Tractor?
-    </label>
-    <label class="form-check-label" for="hasHarvester">
-      <input type="checkbox" name='hasHarvester' class="form-check-input"
-      id="hasHarvester" #hasHarvester
+    </app-touch-checkbox>
+    <app-touch-checkbox class="ml-3"
+      id="hasHarvester"
       [ngModel]="hasHarvesterValue"
-      (ngModelChange)="harvesterChanged(hasHarvester.checked)">
-      <fa-icon [icon]="faSquare" class="fa fa-square-o fa-2x" ></fa-icon>
-      <fa-icon [icon]="faCheckSquare" class="fa fa-check-square-o fa-2x"></fa-icon>
-        Harvester?
-    </label>
+      (ngModelChange)="harvesterChanged($event)">
+      Harvester?
+    </app-touch-checkbox>
   </div>
   <app-dollar-amount-input
     [ngModel]="cashInHand"
@@ -58,7 +52,7 @@
   <ul class="list-group list-group-horizontal d-flex mb-3">
     <li class="list-group-item"><h3 class="text-muted">Total Value</h3></li>
     <li class="list-group-item flex-grow-1">
-      <strong>{{totalAmount | currency:'USD':'symbol':'1.0-0'}}</strong>
+      <h3>{{totalAmount | currency:'USD':'symbol':'1.0-0'}}</h3>
     </li>
   </ul>
   <div>

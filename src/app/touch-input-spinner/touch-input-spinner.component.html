@@ -10,7 +10,8 @@
     <input type="number" class="form-control"
       id={{id}} #spinner
       min="{{min}}" step="{{step}}"
-      [ngModel]="inputValue">
+      [ngModel]="inputValue"
+      (ngModelChange)="onInputChanged($event)">
     <div class="input-group-append">
       <button class="btn btn-outline-secondary" type="button" id="button-minus"
       (click)="decrement()">-</button>

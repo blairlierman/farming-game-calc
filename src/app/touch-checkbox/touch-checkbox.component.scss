@@ -1,0 +1,41 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+.fa-2x {
+  vertical-align: middle;
+}
+
+label.form-check-label {
+  font-size: 1.2em;
+}
+
+// Hide the actual checkbox but don't remove it from the DOM
+label input[type="checkbox"] {
+  opacity: 0;
+  margin-right: -1.5rem;
+}
+
+// Show the empty square icon for checkbox by default
+label input[type="checkbox"] ~ fa-icon.fa.fa-square-o
+{
+  color: #ced4da;
+  display: inline;
+}
+
+// Hide the checked square icon for checkbox by default
+label input[type="checkbox"] ~ fa-icon.fa.fa-check-square-o
+{
+  display: none;
+}
+
+// Hide the empty square icon for checkbox when checked
+label input[type="checkbox"]:checked ~ fa-icon.fa.fa-square-o{
+  display: none;
+}
+
+// Show the checked square icon for checkbox when checked
+label input[type="checkbox"]:checked ~ fa-icon.fa.fa-check-square-o {
+  color: color("text-dark");
+  display: inline;
+}

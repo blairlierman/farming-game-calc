@@ -39,6 +39,12 @@ export class TouchInputSpinnerComponent implements ControlValueAccessor {
     this.propagateChange(this.inputValue);
   }
 
+  onInputChanged(newValue: number) {
+    console.log(`inputChanged: ${newValue}`);
+    this.inputValue = newValue;
+    this.propagateChange(this.inputValue);
+  }
+
   writeValue(value: number) {
     console.log(value);
     if (value !== undefined) {

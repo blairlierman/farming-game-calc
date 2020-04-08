@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +6,6 @@ import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regul
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  faSquare: IconDefinition = faSquare;
-  faCheckSquare: IconDefinition = faCheckSquare;
   totalAmount = 40000;
   hayAmount = 20000;
   grainAmount = 20000;
@@ -75,7 +72,7 @@ export class AppComponent {
   debtChanged(debt: string) {
     let debtInt = parseInt(debt, 10) || 0;
     // If a negative value is entered, just make it positive. We subtract it later
-    if (debtInt < 0) { debtInt = debtInt * -1;}
+    if (debtInt < 0) { debtInt = debtInt * -1; }
     this.debtAmount = debtInt;
     this.calculateTotal();
   }
@@ -93,6 +90,7 @@ export class AppComponent {
     this.fruitAcres = null;
     this.numberOfCows = null;
     this.cashInHand = null;
+    this.debt = null;
     this.hasHarvesterValue = false;
     this.hasTractor = false;
     this.totalAmount = 40000;
@@ -103,6 +101,7 @@ export class AppComponent {
     this.tractorAmount = 0;
     this.harvesterAmount = 0;
     this.cashAmount = 0;
+    this.debtAmount = 0;
     this.calculateTotal();
   }
 }

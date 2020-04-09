@@ -34,19 +34,19 @@ export class TouchCheckboxComponent implements ControlValueAccessor, OnInit {
     this.renderer.setAttribute(this.el.nativeElement, 'tabindex', '0');
   }
 
-  @HostListener('focus', ['$event'])
+  @HostListener('focus')
   onFocus() {
     this._setInputFocus(true);
   }
 
-  @HostListener('blur', ['$event'])
+  @HostListener('blur')
   onBlur() {
     this._setInputFocus(false);
   }
 
   // React to the enter and space key to change the input value, like a regular checkbox
-  @HostListener('keyup.space', ['$event'])
-  @HostListener('keyup.enter', ['$event'])
+  @HostListener('keyup.space')
+  @HostListener('keyup.enter')
   onKeyUp() {
     this.onInputChanged(!this.inputValue);
   }

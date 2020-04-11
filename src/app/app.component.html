@@ -2,36 +2,39 @@
   <span class="text-light">Farming Game Net Asset Calculator</span>
 </nav>
 <div class="container mt-2">
-  <app-touch-input-spinner id="hayAcres" step="10"
+  <app-touch-input-spinner id="hayAcres"
+    step="10"
+    class="mb-1"
     [ngModel]="hayAcres"
     (ngModelChange)="hayAcresChanged($event)">
     Acres of Hay
   </app-touch-input-spinner>
   <app-touch-input-spinner id="grainAcres" step="10"
+    class="mb-1"
     [ngModel]="grainAcres"
     (ngModelChange)="grainAcresChanged($event)">
     Acres of Grain
   </app-touch-input-spinner>
   <app-touch-input-spinner id="fruitAcres" step="5"
+    class="mb-1"
     [ngModel]="fruitAcres"
     (ngModelChange)="fruitAcresChanged($event)">
     Acres of Fruit
   </app-touch-input-spinner>
   <app-touch-input-spinner id="cowCount" step="10"
+    class="mb-1"
     [ngModel]="numberOfCows"
     (ngModelChange)="cowsChanged($event)">
     Number of Cows
   </app-touch-input-spinner>
-  <div class="form-group form-check">
-  </div>
-  <div class="form-group form-check-inline d-flex justify-content-around">
-    <app-touch-checkbox class="ml-3"
+  <div class="form-check-inline d-flex justify-content-around">
+    <app-touch-checkbox class="ml-3 my-1"
       id="hasTractor"
       [ngModel]="hasTractor"
       (ngModelChange)="tractorChanged($event)">
       Tractor?
     </app-touch-checkbox>
-    <app-touch-checkbox class="ml-3"
+    <app-touch-checkbox class="ml-3 my-1"
       id="hasHarvester"
       [ngModel]="hasHarvesterValue"
       (ngModelChange)="harvesterChanged($event)">
@@ -39,17 +42,19 @@
     </app-touch-checkbox>
   </div>
   <app-dollar-amount-input
+    class="mb-1"
     [ngModel]="cashInHand"
     (ngModelChange)="cashChanged($event)">
     Cash on Hand
   </app-dollar-amount-input>
   <app-dollar-amount-input
+    class="mb-1"
     [showNegative]="true"
     [ngModel]="debt"
     (ngModelChange)="debtChanged($event)">
     Debt
   </app-dollar-amount-input>
-  <ul class="list-group list-group-horizontal d-flex mb-3">
+  <ul class="list-group list-group-horizontal d-flex mb-1 mb-md-3">
     <li class="list-group-item"><h3 class="text-muted">Total Value</h3></li>
     <li class="list-group-item flex-grow-1">
       <h3>{{totalAmount | currency:'USD':'symbol':'1.0-0'}}</h3>

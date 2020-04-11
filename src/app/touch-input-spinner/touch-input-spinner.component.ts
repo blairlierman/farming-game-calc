@@ -18,6 +18,7 @@ export class TouchInputSpinnerComponent implements ControlValueAccessor {
   @Input() step = 1;
   @Input() id: string;
   @Input() min = 0;
+  @Input() class: string;
 
   @Input() inputValue: number;
   propagateChange = (_: any) => {};

@@ -17,6 +17,7 @@ export class DollarAmountInputComponent implements ControlValueAccessor {
 
   @Input() showNegative: boolean;
   @Input() inputValue: number;
+  @Input() class: string;
 
   propagateChange = (_: any) => {};
 

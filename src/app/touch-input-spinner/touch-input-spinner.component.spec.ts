@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TouchInputSpinnerComponent } from './touch-input-spinner.component';
+import { FormsModule } from '@angular/forms';
 
 describe('InputSpinnerComponent', () => {
   let component: TouchInputSpinnerComponent;
@@ -8,7 +9,10 @@ describe('InputSpinnerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TouchInputSpinnerComponent ]
+      declarations: [ TouchInputSpinnerComponent ],
+      imports: [
+        FormsModule
+      ]
     })
     .compileComponents();
   }));

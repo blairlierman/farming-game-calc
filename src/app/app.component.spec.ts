@@ -38,10 +38,10 @@ describe('AppComponent', () => {
     expect(app.totalAmount).toEqual(40000);
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render totalAmount as dollar amount in a h3 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to FarmingGameNetAssetCalculator!');
+    expect(compiled.querySelector('#totalAmount').textContent).toContain('$40,000');
   });
 });

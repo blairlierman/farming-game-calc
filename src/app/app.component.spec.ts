@@ -77,4 +77,16 @@ describe('AppComponent', () => {
 
     expect(app.totalAmount).toEqual(0);
   });
+
+  it('should update Hay acres and amounts when Hay acres are changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.hayAcresChanged(100);
+
+    expect(app.hayAcres).toEqual(100);
+    expect(app.hayAmount).toEqual(200000);
+    expect(app.totalAmount).toEqual(220000); // includes Grain Amount
+
+  });
 });

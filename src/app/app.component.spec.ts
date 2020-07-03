@@ -44,4 +44,37 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('#totalAmount').textContent).toContain('$40,000');
   });
+
+  it('should calculate the total amount from all different amounts', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+    app.cashAmount = 10000;
+    app.hayAmount = 10000;
+    app.harvesterAmount = 10000;
+    app.tractorAmount = 10000;
+    app.grainAmount = 10000;
+    app.cowAmount = 10000;
+    app.fruitAmount = 10000;
+
+    app.calculateTotal();
+
+    expect(app.totalAmount).toEqual(70000);
+  });
+
+  it('should calculate the total amount and subtract debt', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+    app.cashAmount = 10000;
+    app.hayAmount = 10000;
+    app.harvesterAmount = 10000;
+    app.tractorAmount = 10000;
+    app.grainAmount = 10000;
+    app.cowAmount = 10000;
+    app.fruitAmount = 10000;
+
+    app.debtAmount = 70000;
+    app.calculateTotal();
+
+    expect(app.totalAmount).toEqual(0);
+  });
 });

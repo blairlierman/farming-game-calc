@@ -211,4 +211,47 @@ describe('AppComponent', () => {
     expect(app.totalAmount).toEqual(60000);
   });
 
+  it('should reset to default amount and values when resetClicked called', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+    app.hayAmount = 10000;
+    app.grainAmount = 10000;
+    app.fruitAmount = 10000;
+    app.cowAmount = 10000;
+    app.harvesterAmount = 10000;
+    app.tractorAmount = 10000;
+    app.cashAmount = 10000;
+    app.debtAmount = 10000;
+    app.hayAcres = 5;
+    app.grainAcres = 5;
+    app.fruitAcres = 2;
+    app.numberOfCows = 20;
+    app.hasTractor = true;
+    app.hasHarvesterValue = true;
+    app.cashInHand = '10000';
+    app.debt = '10000';
+    app.totalAmount = 60000;
+
+    app.onResetClicked();
+
+    expect(app.totalAmount).toEqual(40000);
+    expect(app.hayAmount).toEqual(20000);
+    expect(app.grainAmount).toEqual(20000);
+    expect(app.fruitAmount).toEqual(0);
+    expect(app.cowAmount).toEqual(0);
+    expect(app.harvesterAmount).toEqual(0);
+    expect(app.tractorAmount).toEqual(0);
+    expect(app.cashAmount).toEqual(0);
+    expect(app.debtAmount).toEqual(0);
+    expect(app.hayAcres).toEqual(10);
+    expect(app.grainAcres).toEqual(10);
+    expect(app.fruitAcres).toBeNull();
+    expect(app.numberOfCows).toBeNull();
+    expect(app.hasTractor).toBeFalsy();
+    expect(app.hasHarvesterValue).toBeFalsy();
+    expect(app.cashInHand).toBeNull();
+    expect(app.debt).toBeNull();
+
+  });
+
 });

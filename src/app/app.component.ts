@@ -74,6 +74,7 @@ export class AppComponent {
     // If a negative value is entered, just make it positive. We subtract it later
     if (debtInt < 0) { debtInt = debtInt * -1; }
     this.debtAmount = debtInt;
+    this.debt = debt;
     this.calculateTotal();
   }
 

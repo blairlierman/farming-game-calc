@@ -194,4 +194,21 @@ describe('AppComponent', () => {
     expect(app.totalAmount).toEqual(40000 - 12345); // includes Hay and Grain Amounts (40000)
   });
 
+  it('should calculate proper total amount when other amounts are set', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+    app.hayAmount = 10000;
+    app.grainAmount = 10000;
+    app.fruitAmount = 10000;
+    app.cowAmount = 10000;
+    app.harvesterAmount = 10000;
+    app.tractorAmount = 10000;
+    app.cashAmount = 10000;
+    app.debtAmount = 10000;
+
+    app.calculateTotal();
+
+    expect(app.totalAmount).toEqual(60000);
+  });
+
 });

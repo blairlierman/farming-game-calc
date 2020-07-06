@@ -89,4 +89,109 @@ describe('AppComponent', () => {
     expect(app.totalAmount).toEqual(220000); // includes Grain Amount
 
   });
+
+  it('should update Grain acres and amounts when Grain acres are changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.grainAcresChanged(100);
+
+    expect(app.grainAcres).toEqual(100);
+    expect(app.grainAmount).toEqual(200000);
+    expect(app.totalAmount).toEqual(220000); // includes Hay Amount
+
+  });
+
+  it('should update Fruit acres and amounts when Fruit acres are changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.fruitAcresChanged(100);
+
+    expect(app.fruitAcres).toEqual(100);
+    expect(app.fruitAmount).toEqual(500000);
+    expect(app.totalAmount).toEqual(540000); // includes Hay and Grain Amounts
+
+  });
+
+  it('should update number of cows and amounts when Cows are changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.cowsChanged(100);
+
+    expect(app.numberOfCows).toEqual(100);
+    expect(app.cowAmount).toEqual(50000);
+    expect(app.totalAmount).toEqual(90000); // includes Hay and Grain Amounts
+
+  });
+
+  it('should update total amount when Has Tractor is changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.tractorChanged(true);
+
+    expect(app.hasTractor).toBeTruthy();
+    expect(app.tractorAmount).toEqual(10000);
+    expect(app.totalAmount).toEqual(50000); // includes Hay and Grain Amounts (40000)
+
+    app.tractorChanged(false);
+
+    expect(app.hasTractor).toBeFalsy();
+    expect(app.tractorAmount).toEqual(0);
+    expect(app.totalAmount).toEqual(40000); // includes Hay and Grain Amounts (40000)
+
+  });
+
+  it('should update total amount when Has Harvested is changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.harvesterChanged(true);
+
+    expect(app.hasHarvesterValue).toBeTruthy();
+    expect(app.harvesterAmount).toEqual(10000);
+    expect(app.totalAmount).toEqual(50000); // includes Hay and Grain Amounts (40000)
+
+    app.harvesterChanged(false);
+
+    expect(app.hasHarvesterValue).toBeFalsy();
+    expect(app.harvesterAmount).toEqual(0);
+    expect(app.totalAmount).toEqual(40000); // includes Hay and Grain Amounts (40000)
+  });
+
+  it('should update total amount when Cash Amount is changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.cashChanged('12345');
+
+    expect(app.cashInHand).toEqual('12345');
+    expect(app.cashAmount).toEqual(12345);
+    expect(app.totalAmount).toEqual(40000 + 12345); // includes Hay and Grain Amounts (40000)
+  });
+
+  it('should subtract from total amount when Debt Amount is changed', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.debtChanged('12345');
+
+    expect(app.debt).toEqual('12345');
+    expect(app.debtAmount).toEqual(12345);
+    expect(app.totalAmount).toEqual(40000 - 12345); // includes Hay and Grain Amounts (40000)
+  });
+
+  it('should subtract from total amount when Debt Amount even when debt is passed as negative', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app: AppComponent = fixture.debugElement.componentInstance;
+
+    app.debtChanged('-12345');
+
+    expect(app.debt).toEqual('-12345');
+    expect(app.debtAmount).toEqual(12345);
+    expect(app.totalAmount).toEqual(40000 - 12345); // includes Hay and Grain Amounts (40000)
+  });
+
 });

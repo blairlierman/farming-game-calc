@@ -1,4 +1,5 @@
 ![Deploy to GitHub Pages](https://github.com/blairlierman/farming-game-calc/workflows/Deploy%20to%20GitHub%20Pages/badge.svg?branch=master)
+![Unit Tests](https://github.com/blairlierman/farming-game-calc/workflows/Unit%20Tests/badge.svg)
 
 # The Farming Game Net Asset Calculator
 

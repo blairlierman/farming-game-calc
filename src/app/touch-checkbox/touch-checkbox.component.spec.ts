@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TouchCheckboxComponent } from './touch-checkbox.component';
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('TouchCheckboxComponent', () => {
   let component: TouchCheckboxComponent;
@@ -8,7 +10,11 @@ describe('TouchCheckboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TouchCheckboxComponent ]
+      declarations: [ TouchCheckboxComponent ],
+      imports: [
+        FormsModule,
+        FontAwesomeModule
+      ]
     })
     .compileComponents();
   }));

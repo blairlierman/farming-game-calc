@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DollarAmountInputComponent } from './dollar-amount-input.component';
+import { FormsModule } from '@angular/forms';
 
 describe('DollarAmountInputComponent', () => {
   let component: DollarAmountInputComponent;
@@ -8,7 +9,10 @@ describe('DollarAmountInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DollarAmountInputComponent ]
+      declarations: [ DollarAmountInputComponent ],
+      imports: [
+        FormsModule
+      ]
     })
     .compileComponents();
   }));

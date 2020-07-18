@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { DollarAmountInputComponent } from './dollar-amount-input/dollar-amount-input.component';
 import { TouchCheckboxComponent } from './touch-checkbox/touch-checkbox.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     TouchInputSpinnerComponent,
     DollarAmountInputComponent,
     TouchCheckboxComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

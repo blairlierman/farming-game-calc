@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DollarAmountInputComponent } from './dollar-amount-input.component';
 import { FormsModule } from '@angular/forms';
@@ -7,7 +7,7 @@ describe('DollarAmountInputComponent', () => {
   let component: DollarAmountInputComponent;
   let fixture: ComponentFixture<DollarAmountInputComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DollarAmountInputComponent ],
       imports: [

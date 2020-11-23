@@ -1,4 +1,4 @@
-import { Component, Input, forwardRef, ElementRef, Renderer, Renderer2, OnInit, HostListener } from '@angular/core';
+import { Component, Input, forwardRef, ElementRef, Renderer2, OnInit, HostListener } from '@angular/core';
 import { faCheckSquare, faSquare, IconDefinition } from '@fortawesome/free-regular-svg-icons';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 

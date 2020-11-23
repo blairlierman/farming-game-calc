@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MainPageComponent } from './main-page.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -9,7 +9,7 @@ import { DollarAmountInputComponent } from '../../dollar-amount-input/dollar-amo
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('MainPageComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,

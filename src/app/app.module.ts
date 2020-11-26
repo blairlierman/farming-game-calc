@@ -12,6 +12,8 @@ import { DollarAmountInputComponent } from './dollar-amount-input/dollar-amount-
 import { TouchCheckboxComponent } from './touch-checkbox/touch-checkbox.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

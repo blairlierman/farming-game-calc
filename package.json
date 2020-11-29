@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:pwa": "http-server -p 8080 -c-1 dist/FarmingGameNetAssetCalculator",
     "build": "ng build",
     "test": "ng test --watch=false",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
@@ -21,6 +22,7 @@
     "@angular/platform-browser": "~11.0.2",
     "@angular/platform-browser-dynamic": "~11.0.2",
     "@angular/router": "~11.0.2",
+    "@angular/service-worker": "~11.0.2",
     "@fortawesome/angular-fontawesome": "^0.7.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
@@ -40,6 +42,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
+    "http-server": "^0.12.3",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.1.1",

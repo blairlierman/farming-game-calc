@@ -1,6 +1,6 @@
 {
-  "name": "FarmingGameNetAssetCalculator",
-  "short_name": "FarmingGameNetAssetCalculator",
+  "name": "The Farming Game Net Asset Calculator",
+  "short_name": "Farming Game Calculator",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

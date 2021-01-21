@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1611270201450,
+  "index": "/farming-game-calc/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/farming-game-calc/favicon.ico",
+        "/farming-game-calc/index.html",
+        "/farming-game-calc/main-es2015.f8c4f3ce24c9d7a185c4.js",
+        "/farming-game-calc/main-es5.f8c4f3ce24c9d7a185c4.js",
+        "/farming-game-calc/manifest.webmanifest",
+        "/farming-game-calc/polyfills-es2015.d3d284a472d394176a58.js",
+        "/farming-game-calc/polyfills-es5.dd86e3937f5a287c4cff.js",
+        "/farming-game-calc/runtime-es2015.681bd8a4edb177c86959.js",
+        "/farming-game-calc/runtime-es5.681bd8a4edb177c86959.js",
+        "/farming-game-calc/styles.550e174dd432bbfe97f0.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/farming-game-calc/assets/icons/icon-128x128.png",
+        "/farming-game-calc/assets/icons/icon-144x144.png",
+        "/farming-game-calc/assets/icons/icon-152x152.png",
+        "/farming-game-calc/assets/icons/icon-192x192.png",
+        "/farming-game-calc/assets/icons/icon-384x384.png",
+        "/farming-game-calc/assets/icons/icon-512x512.png",
+        "/farming-game-calc/assets/icons/icon-72x72.png",
+        "/farming-game-calc/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/farming-game-calc/assets/icons/icon-128x128.png": "8c8f088bbb6b30a34a894095ad2665343da2df18",
+    "/farming-game-calc/assets/icons/icon-144x144.png": "d269926111c6dd090aeecbb2e657bde55e3a315d",
+    "/farming-game-calc/assets/icons/icon-152x152.png": "d2739d52fa74a5aa17b30bbdb526769bab21498f",
+    "/farming-game-calc/assets/icons/icon-192x192.png": "8cff47aadcaa21cf0cc55d6dd0d4eaaae60c6ac6",
+    "/farming-game-calc/assets/icons/icon-384x384.png": "62939697a575550cb92522e7d03bab0ebea3ad83",
+    "/farming-game-calc/assets/icons/icon-512x512.png": "085db3a7f0d8513b090092242fe3905abfc0c22a",
+    "/farming-game-calc/assets/icons/icon-72x72.png": "9c8023fd78c5a21c93afed053a57d055d2419fb1",
+    "/farming-game-calc/assets/icons/icon-96x96.png": "4bb1e9e0f8cc506c030f536201613014fd1d0a57",
+    "/farming-game-calc/favicon.ico": "eae006e5acdc4795b4d13fc780cdc8e8e8ee2b8c",
+    "/farming-game-calc/index.html": "9acfa0d4031ba81bddc6c44edb6176f1f10fa775",
+    "/farming-game-calc/main-es2015.f8c4f3ce24c9d7a185c4.js": "8b925bd6fc25207ba10081932ee5e395dbf9f1e1",
+    "/farming-game-calc/main-es5.f8c4f3ce24c9d7a185c4.js": "a2836bc9f0c650697478f238b4fcb32ad9ceebf4",
+    "/farming-game-calc/manifest.webmanifest": "f1297d90410c5bb22287704bd651816c2c71b332",
+    "/farming-game-calc/polyfills-es2015.d3d284a472d394176a58.js": "d373e0370dbfe91a44282ee31ce09348187b2fc2",
+    "/farming-game-calc/polyfills-es5.dd86e3937f5a287c4cff.js": "ec2bcdff449d16fa1df7bbf93b08146577d261ce",
+    "/farming-game-calc/runtime-es2015.681bd8a4edb177c86959.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/farming-game-calc/runtime-es5.681bd8a4edb177c86959.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/farming-game-calc/styles.550e174dd432bbfe97f0.css": "c628d3a33d38a390eb3c161b3d4ba966607db856"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

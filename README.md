@@ -3,13 +3,13 @@
 
 # The Farming Game Net Asset Calculator
 
-A simple utility for the board game [The Farming Game](http://farmgame.com/product/woo-single-2/) to help calculate your total assets based on the acreage and objects you own.
+A simple utility for the board game [The Farming Game](https://boardgamegeek.com/boardgame/5195/farming-game) to help calculate your total assets based on the acreage and objects you own. I'm all about using technology to enhance physical board games and playing with friends and family. If you'd like a copy yourself, you can purchase it on [the official site](http://farmgame.com/product/woo-single-2/).
 
 You can view the actual [web app on GitHub Pages](https://blairlierman.github.io/farming-game-calc/). It is designed for mobile first, although it will work in almost any browser.
 
 ## Development instructions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1. It has been upgraded to use Angular CLI version 11.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1. It has been upgraded to use Angular CLI version 13.1.2.
 
 ### Development server
 

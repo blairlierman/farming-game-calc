@@ -9,7 +9,8 @@
     "test": "ng test --watch=false",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "icons": "pwa-asset-generator src/assets/icons/icon.png src/assets/icons --icon-only -i src/index.html -m src/manifest.webmanifest"
   },
   "private": true,
   "dependencies": {
@@ -52,6 +53,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "puppeteer": "^5.5.0",
+    "pwa-asset-generator": "^6.0.6",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
     "typescript": "~4.5.4"

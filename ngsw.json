@@ -1,0 +1,73 @@
+{
+  "configVersion": 1,
+  "timestamp": 1661396077047,
+  "index": "/farming-game-calc/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/farming-game-calc/favicon.ico",
+        "/farming-game-calc/index.html",
+        "/farming-game-calc/main.981ca6117086065e.js",
+        "/farming-game-calc/manifest.webmanifest",
+        "/farming-game-calc/polyfills.325e4a55e32c9b15.js",
+        "/farming-game-calc/runtime.a81c374296a7c497.js",
+        "/farming-game-calc/styles.829d952365e80c40.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/farming-game-calc/assets/icons/apple-icon-180.png",
+        "/farming-game-calc/assets/icons/icon.png",
+        "/farming-game-calc/assets/icons/manifest-icon-192.maskable.png",
+        "/farming-game-calc/assets/icons/manifest-icon-512.maskable.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/farming-game-calc/assets/icons/apple-icon-180.png": "3f1730b132dc4d039076b1f7958f128e5ed26ad0",
+    "/farming-game-calc/assets/icons/icon.png": "8285820b782c8bddb83b521b723bfede19e2fbb2",
+    "/farming-game-calc/assets/icons/manifest-icon-192.maskable.png": "8307a5f50c6c5e0e31655081942404c1855f6f5d",
+    "/farming-game-calc/assets/icons/manifest-icon-512.maskable.png": "f5c496172ecaf9701d2b7607f74d61688d6cc861",
+    "/farming-game-calc/favicon.ico": "eae006e5acdc4795b4d13fc780cdc8e8e8ee2b8c",
+    "/farming-game-calc/index.html": "e3f467a7447e707b319c9950da723acb42be3b1c",
+    "/farming-game-calc/main.981ca6117086065e.js": "c707c1fbed69d09474ddd5ebbdcbb61e48bba571",
+    "/farming-game-calc/manifest.webmanifest": "df162f33437b185fe1e1bfd8d8e49383f6f81a27",
+    "/farming-game-calc/polyfills.325e4a55e32c9b15.js": "16947fcd51a3b7fbf00abf3b371663820ca04951",
+    "/farming-game-calc/runtime.a81c374296a7c497.js": "dca5be795522c36420499f78870f3225d3b36102",
+    "/farming-game-calc/styles.829d952365e80c40.css": "7057557b8e5f1555100b46d8f37fdb18cf6b3a94"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
